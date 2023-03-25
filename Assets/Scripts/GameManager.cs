@@ -218,6 +218,7 @@ public class GameManager : Singleton<GameManager>
     public void TreasureCollected()
     {
         // Tell the currentGnome that it should have the treasure.
+        Debug.Log("Treasure Collected");
         currentGnome.holdingTreasure = true;
     }
     // END 2d_gamemanager_ontouch

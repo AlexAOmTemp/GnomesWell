@@ -41,6 +41,7 @@ public class SignalOnTouch : MonoBehaviour {
 					audio.Play();
 			}
 			// Invoke the event
+			Debug.Log($"The collision between {gameObject.name} and {objectThatHit}");
 			onTouch.Invoke();
 		}
 	}

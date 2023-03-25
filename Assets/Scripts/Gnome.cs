@@ -24,9 +24,8 @@ public class Gnome : MonoBehaviour {
 	public GameObject bloodFountainPrefab;
 
 	bool dead = false;
-
-	bool _holdingTreasure = false;
-
+    bool _holdingTreasure = false;
+  
 	public bool holdingTreasure {
 		get {
 			return _holdingTreasure;
@@ -37,7 +36,7 @@ public class Gnome : MonoBehaviour {
 			}
 
 			_holdingTreasure = value;
-
+			Debug.Log($"golding tresure = {_holdingTreasure}");
 			if (holdingArm != null) {
 				if (_holdingTreasure) {
 					holdingArm.sprite = armHoldingTreasure;

@@ -17,11 +17,11 @@ public class SpriteSwapper : MonoBehaviour {
 	private Sprite originalSprite;
 
 	// Swaps out the sprite.
-	public void SwapSprite() {
+    public void SwapSprite() {
 
 		// If this sprite is different to the current sprite...
 		if (spriteToUse != spriteRenderer.sprite) {
-
+			Debug.Log($"sprite swapped by {gameObject.name}");
 			// Store the previous store in originalSprite
 			originalSprite = spriteRenderer.sprite;
 
@@ -35,8 +35,9 @@ public class SpriteSwapper : MonoBehaviour {
 
 		// If we have a previous sprite...
 		if (originalSprite != null) {
-			// ...make the sprite renderer use it.
-			spriteRenderer.sprite = originalSprite;
+            Debug.Log("sprite resetted");
+            // ...make the sprite renderer use it.
+            spriteRenderer.sprite = originalSprite;
 		}
 	}
 }
